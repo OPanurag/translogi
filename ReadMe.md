@@ -31,15 +31,14 @@ This project requires the following Python packages:
    ```
 Navigate to the project directory:
 
-bash
-Copy
-Edit
-cd route-optimization
+```
+cd route-optimization-project-directory
+```
+
 Set Up the Environment
 To set up the required environment and dependencies, follow these steps:
 
 Create a Virtual Environment:
-bash
 ```
 python -m venv venv
 ```
@@ -47,20 +46,16 @@ python -m venv venv
 Activate the Virtual Environment:
 
 On macOS/Linux:
-bash
 ```
 source venv/bin/activate
 ```
 
 Install Required Dependencies:
-
-bash
 ```
 pip install -r requirements.txt
 ```
 
 If requirements.txt is not available, you can manually install the necessary packages with:
-bash
 ```
 pip install streamlit googlemaps geopy requests scikit-learn pickle
 ```
@@ -92,20 +87,19 @@ Store_Latitude, Store_Longitude, Drop_Latitude, Drop_Longitude, Delivery_Time
 The machine learning model will be trained to predict the delivery time based on these features.
 
 Run the following script to train the model and save it using pickle:
-
-bash
 ```
 python model.py
 ```
+
 This will create a delivery_model.pkl file that contains the trained model.
 
 Run the Application
-Start the Streamlit app by running the following command:
 
-bash
+Start the Streamlit app by running the following command:
 ```
 streamlit run src/app.py
 ```
+
 The application will open in your default browser, where you can:
 
 Enter the origin city.
@@ -118,14 +112,14 @@ Once the application is running, the user will be prompted to:
 
 Enter an origin city.
 Enter drop points (separate multiple cities with commas).
+
 View the optimized delivery route, including:
 The best order of delivery points.
 The travel time and distance for each leg of the journey.
 The total travel time and distance for the entire route.
+
 Example:
 
 Origin City: Chicago
 Drop Points: New York, Los Angeles, San Francisco
 Output: Optimized route and total time/distance.
-Contributing
-Feel free to fork this repository, create a pull request, or open an issue if you find any bugs or would like to suggest new features.
